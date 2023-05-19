@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 /*font*/
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@100&display=swap');
-
+* { touch-action: pan-y; }  /*手機版bug*/
 :root{
     --easeOutQuad: cubic-bezier(.25, .46, .45, .94);
     --base-link-color: #ffc300;

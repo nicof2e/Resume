@@ -54,5 +54,7 @@ const app = Vue.createApp({
       });
       
       var s = skrollr.init();//skrollr初始化
+
+
   },
 });
