@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer" />
+        <title>Document</title>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
+        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+        <script src="vendor/bootstrap/bootstrap.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--skrollr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+        
+        <link rel="stylesheet" href="wwwroot/css/index.css" />
+        <script src="wwwroot/js/index.js"></script>
+
+    </head>
+    <body>
+        <div id="app">
+        <div id="skrollr-body">
+            <!--navbar-->
+            <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white0">
+                <div class="container"><a id="logo" class="navbar-brand">Nicof2e</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="#section_Home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#section_ask">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#section_hamster">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#section_tips">Projects</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#section_prepare">基本功 PREPARE</a></li> -->
+                        </ul>
+                        <div class="navbar-text">
+                            <div class="social-icon">
+                                <a href="https://github.com/nicof2e" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                                    </svg>
+                                </a>
+                                <a href="" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                                    </svg>
+                                </a>
+                                <a href="" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                        <path d="M16.5 7.5l0 .01" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <header id="section_Home" class="jumbotron">
+                <div class="container">
+                    <div style="position: absolute;display: flex;justify-content: center;align-items: center;">
+                        <span class="tagline">Welcome to my Portfolio</span>
+                    </div>
+                    <img src="/wwwroot/image/ufo_4.png" width="200" style="bottom:-212px">
+                    <img src="/wwwroot/image/astronaut.png" id="astronaut_left" width="70">
+                    <img src="/wwwroot/image/astronaut3.png" id="astronaut_right" width="100">
+                </div>
+            </header>
+            <section id="section_ask">
+                <div class="container_fulid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 img" data-100="transform: translateX(-800px)" data-500="transform: translateX(0px)"> </div>
+                        <div class="col-12 col-lg-6" data-300="opacity: 0" data-500="opacity: 1"> 
+                        <!-- <h2>飼養須知大公開！愛祂就要照顧祂♥</h2> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section_hamster">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12" data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1">
+                            <h1>###</h1>
+                            <hr/>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="img_wrap" data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"><img src=""/></div>
+                            <h3 data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1">金絲熊 ✿</h3>
+                            <p data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1">金絲熊學名黃金鼠（Golden Hamster），是倉鼠中體型最大的品種。毛色並非全像名字般的黃金色，多半為單色、雙色，三色則較少見。目前有超過30種花色的金絲熊，從淡黃色、淺褐色到巧克力色，而且還有各種不同的斑紋。金絲熊的眼睛只能看到黑與白兩種顏色，又不能看超過2米遠的東西，所以活動全憑聽力。<br><br>為非群居性的動物，只能一籠一鼠，當它們長到四個星期大的時候就必須分開飼養。金絲熊屬夜行性動物，身上沒有任何不良氣味，而且花許多時間在清潔上。雄性的金絲熊要比雌性的更容易馴養。</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="img_wrap" data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"> <img src=""/></div>
+                            <h3 data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"> 西施鼠 ✿</h3>
+                            <p data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"> 西施熊是由金絲熊培育而來的最高級大型倉鼠，是一個獨立的品種，不得與低級品種雜交，否則不僅會導致基因的退化，也會導致性格的變異。<br><br>西施熊性格溫順，身披華麗而又尊貴的柔順長毛，很是討人喜愛，是倉鼠中不可多得的寵物品種。作為一種優秀長毛品種的倉鼠，西施熊的本質依然是一種黃金倉鼠（敘利亞倉鼠）。</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="img_wrap" data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"> <img src=""/></div>
+                            <h3 data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"> 熊貓鼠 ✿</h3>
+                            <p data-bottom-top="transform: translateY(-50px); opacity: 0" data-center="transform: translateY(0px); opacity: 1"> 熊貓也稱奶牛，類屬於敘利亞倉鼠（金絲熊），因為黑白相間的毛色而得名，原產於敘利亞、黎巴嫩、以色列等地，於1938年引入美國後才正式成為寵物，毛色黑白分明。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="section_tips">
+            <div class="container-fluid">
+                <div class="col-sm-12">
+                    <h2>飼養須知•̀.̫•́✧</h2>
+                    <hr/>
+                </div>
+                <div class="col-sm-12 features">
+                    <div class="row">
+                        <div class="col-12 col-sm" data-bottom-top="transform: scale(1.5); opacity: 0" data-center="transform: scale(1); opacity: 1"> <img src=""/>
+                            <h4>一鼠一籠</h4>
+                        </div>
+                        <div class="col-12 col-sm" data-bottom-top="transform: scale(1.5); opacity: 0" data-center="transform: scale(1); opacity: 1"> <img src=""/>
+                            <h4>夜行性動物</h4>
+                        </div>
+                        <div class="col-12 col-sm" data-bottom-top="transform: scale(1.5); opacity: 0" data-center="transform: scale(1); opacity: 1"> <img src=""/>
+                            <h4>恆溫環境</h4>
+                        </div>
+                        <div class="col-12 col-sm" data-bottom-top="transform: scale(1.5); opacity: 0" data-center="transform: scale(1); opacity: 1"> <img src=""/>
+                            <h4>不用浴沙可玩鼠沙</h4>
+                        </div>
+                        <div class="col-12 col-sm" data-bottom-top="transform: scale(1.5); opacity: 0" data-center="transform: scale(1); opacity: 1"> <img src=""/>
+                            <h4>領養代替購買</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section_prepare">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>準備の東西</h2>
+                        <hr/>
+                    </div>
+                    <div class="col-sm-12 card" data-bottom-top="transform: translateX(50px); opacity: 0.5" data-center="transform: translateX(0px); opacity: 1"> 
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="img_wrap">
+                                    <img src="" data-bottom-top="filter: sepia(100%)" data-center="filter: sepia(0.5%)"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 features">
+                                <i class="fa fa-bed"></i>
+                                <h3>鼠籠or整理箱</h3>
+                                <h5>準備ㄧ個安全與足夠通風的籠子／箱子</h5>
+                                <p>黃金鼠的體型在倉鼠界算比較大隻，所以一定要給他足夠的活動空間，建議使用多處躲藏空間有高有低有隧道有藏匿處，籠子的底面積最好是40cm*60cm以上，成年黃金鼠使用的滾輪則至少要20cm以上。<br><br>＊籠子請選購「直條」避免鼠爬高落下，勾到手腳造成骨折等危險</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 card" data-bottom-top="transform: translateX(50px); opacity: 0.5" data-center="transform: translateX(0px); opacity: 1"> 
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="img_wrap">
+                                    <img src="" data-bottom-top="filter: sepia(100%)" data-center="filter: sepia(0%)"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 features"><i class="fa fa-leaf"></i>
+                                <h3>墊材＆巢料</h3>
+                                <h5>安全的墊材：紙製最適合倉鼠貼身使用如廚房紙巾</h5>
+                                <p>全窩約3~5天全部換新墊材，不需過度清潔，需保留祂們自己的味道，墊材與傢俱輪流清潔定期做環境消毒。墊材挑選以紙類、乾草、玉米梗，也得提供築巢墊材如廚紙、衛生紙等無味道、乾淨、透氣、通風可以塑型的紙類墊料為最佳。<br><br>＊請勿使用沐浴砂、廁所砂(貓砂)、砂粉類粉塵多，沾在身上鼠會去舔身體以外的所有物，長期使用將影響鼠鼠健康。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 card" data-bottom-top="transform: translateX(50px); opacity: 0" data-center="transform: translateX(0px); opacity: 1"> 
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="img_wrap">
+                                    <img src="" data-bottom-top="filter: sepia(100%)" data-center="filter: sepia(0%)"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 features">
+                                <i class="fa fa-paw"></i>
+                                <h3>滾輪&水瓶&飼料</h3>
+                                <h5>倉鼠必備用品，缺一不可！</h5>
+                                <p>成年黃金鼠需要使用直徑20cm以上的滾輪，滾輪可以讓倉鼠鍛鍊體力，因鼠鼠的天性在野外會趕路，一日可走約五公里路，有一個跑步機更健康不無聊，飼主可購買靜音滾輪維持家中生活品質。倉鼠飲食主要為專用主食、磨牙飼料、開水（煮過放冷的開水，不可給生水）。<br><br>＊注意！不能給調味過的食物，洋蔥、大蒜、蔥、巧克力、薔薇科植物的種子（蘋果、櫻桃等）對祂們來說是有毒性的，千萬不能食用。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 card" data-bottom-top="transform: translateX(50px); opacity: 0.5" data-center="transform: translateX(0px); opacity: 1"> 
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="img_wrap">
+                                    <img src="" data-bottom-top="filter: sepia(100%)" data-center="filter: sepia(0.5%)"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 features">
+                                <i class="fa fa-thermometer-half"></i>
+                                <h3>散熱or保暖用品</h3>
+                                <h4>夏天與冬天給予的用品</h4>
+                                <p>視天氣變化準備，倉鼠適合的溫度約在21~26度之間(夏28)，夏天的時候可以準備冰涼大理石、散熱片、陶瓷屋，並開啟電扇幫助消暑散熱（不可直接對倉鼠吹）；冬天則可準備保暖小窩，並多給予墊材與巢料來禦寒。勿放置在溫度急速高低處地點，早晚室溫溫差過大也請做好保暖動作與注意事項。<br><br>＊溫度急速升降落差3度以上， 很可能造成身體失溫現象。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 card" data-bottom-top="transform: translateX(50px); opacity: 0.5" data-center="transform: translateX(0px); opacity: 1"> 
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="img_wrap">
+                                    <img src="" data-bottom-top="filter: sepia(100%)" data-center="filter: sepia(0.5%)"/>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 features">
+                                <i class="fa fa-gamepad"></i>
+                                <h3>小玩具</h3>
+                                <h5>增添鼠寶生活樂趣</h5>
+                                <p>市面上的玩具其實很多，倉鼠很喜歡玩耍，所以如果房子夠大就準備些玩具給它們吧！比如蹺蹺板、迷宮、隧道或者可隱匿的小玩具等，在經濟狀況允許下，儘量多給它們購置用品增添樂趣，讓它們生活得更愜意、更舒適。<br><br>＊平常可抽出一點時間陪伴鼠寶，黃金鼠是很善解人意的鼠鼠，對獨居性動物來說同伴對祂來說並不重要而且還是傷害，也因此飼主是祂的唯一唷♥</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="jumbotron jumbotron-fluid">
+            <div class="container">
+            </div>
+        </footer>
+        </div>
+    <script type="text/javascript">
+        app.mount('#app');
+        console.log('%c 不要亂看(／‵Д′)／~ ╧╧', 'color:red;font-size:20px;');
+    </script>
+    </body>
+</html>
