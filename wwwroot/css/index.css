@@ -66,8 +66,11 @@ nav.navbar.fixed-top.navbar-expand-md a {
     transition: 0.5s;
 }
 
+.app{
+  text-align: center;
+}
+
 header.jumbotron {
-    text-align: center;
     background-image: url("/wwwroot/image/planets_bg.png");
     background-position: top;
     background-repeat: no-repeat;
@@ -139,7 +142,6 @@ section#section_skills h2 {
   background: #151515;
   border-radius: 64px;
   padding: 60px 50px;
-  text-align: center;
 }
 
 section#section_Projects{
@@ -304,6 +306,21 @@ section#section_Projects h2, section#section_Projects p{
     padding: 8px 10px;
 }
 
+#section_Home h1{
+  position: absolute;
+  top: 3%;
+  font-weight: bold;
+  display: block;
+  font-size: 55px;
+  text-align: center;
+}
+
+@media print, screen and (min-width: 768px){
+  #section_Home h1{
+    position: absolute;top: 16%;font-weight: bold;display: block;font-size: 70px;text-align: center;
+  }
+}
+
 .proj-imgbx{
   width: 95%;
   border-radius: 30px;
@@ -440,9 +457,115 @@ section#section_Projects h2, section#section_Projects p{
 .codepen-button span {
   position: relative;
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1.1rem;
   background: #000;
   border-radius: 3px;
   height: 100%;
+}
+
+.contact{
+  background: linear-gradient(90.21deg,#aa367c -5.91%,#4a2fbd 111.58%);
+  padding: 60px 0 200px;
+}
+
+.contact img {
+  width: 92%;
+}
+
+.contact h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact form input, .contact form textarea{
+  /*聯絡input*/
+  width: 100%;
+}
+
+.contact form button {
+  background-color: #fff;
+  border-radius: 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 25px;
+  padding: 14px 48px;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+.contact form button:before {
+  background: #121212;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .3s ease-in-out;
+  width: 0;
+  z-index: 0;
+}
+
+.footer {
+  background-image: url(/wwwroot/image/footer-bg.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 0 10px;
+}
+
+.m-container {
+  text-align: center;
+}
+
+@media print, screen and (min-width: 768px){
+  .l-footer_logo a {
+    font-size: 50px;
+  }
+}
+
+
+@media print, screen and (min-width: 1032px){
+    .m-container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 0;
+      padding-left: 0;
+      max-width: 992px;
+  }
+}
+
+.l-footer_logo {
+  padding: 30px 0 0;
+}
+
+@media print, screen and (min-width: 768px){
+    .l-footer_logo {
+      padding-top: 45px;
+  }
+}
+
+.l-footer_copyright {
+  padding: 28px 0;
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+@media print, screen and (min-width: 768px){
+  .l-footer_copyright {
+    padding-top: 36px;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+.l-footer_copyright small {
+  font-size: 100%;
+}
+
+.l-footer_copyright small [lang="en"] {
+  font-family: monospace;
 }
