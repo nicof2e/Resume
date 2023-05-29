@@ -66,7 +66,7 @@ nav.navbar.fixed-top.navbar-expand-md a {
     transition: 0.5s;
 }
 
-.app{
+#app{
   text-align: center;
 }
 
@@ -340,7 +340,7 @@ section#section_Projects h2, section#section_Projects p{
   transition: .4s ease-in-out;
   width: 100%;
   z-index: 1;
-  width: 95%;
+  width: 90%;
   border-radius: 30px;
 }
 
@@ -464,9 +464,11 @@ section#section_Projects h2, section#section_Projects p{
   height: 100%;
 }
 
+/**/
+
 .contact{
   background: linear-gradient(90.21deg,#aa367c -5.91%,#4a2fbd 111.58%);
-  padding: 60px 0 200px;
+  padding: 60px 0 60px;
 }
 
 .contact img {
@@ -480,33 +482,53 @@ section#section_Projects h2, section#section_Projects p{
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 720px) {
+  form {
+    padding: 0 62px 0 35px;
+  }
+}
+
 .contact form input, .contact form textarea{
   /*聯絡input*/
   width: 100%;
+  box-sizing: border-box;
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  height: 40px;
+  margin: 0 0 8px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 20px 10px;
+  outline: none;
 }
 
+.contact form textarea{
+  height: 100px;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder{
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.contact form input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+
 .contact form button {
-  background-color: #fff;
-  border-radius: 0;
-  color: #000;
   font-size: 18px;
   font-weight: 700;
   margin-top: 25px;
   padding: 14px 48px;
-  position: relative;
-  transition: .3s ease-in-out;
-}
-
-.contact form button:before {
-  background: #121212;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: .3s ease-in-out;
-  width: 0;
-  z-index: 0;
 }
 
 .footer {
@@ -568,4 +590,125 @@ section#section_Projects h2, section#section_Projects p{
 
 .l-footer_copyright small [lang="en"] {
   font-family: monospace;
+}
+
+/*submit*/
+.submit-rgb {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.submit-rgb::after,
+.submit-rgb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.submit-rgb::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.submit-rgb::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.submit-rgb:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.submit-rgb:where(:hover, :focus) {
+  color: #fff;
 }
